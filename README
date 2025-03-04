@@ -11,6 +11,10 @@ If things are getting too complicated in your current repo, I suggest just start
     add node_modules to the .dockerignore files
     If you use my docker-compose.yml, make sure you set the REACT_NATIVE_PACKAGER_HOSTNAME environment variable to your local IP
 9. Upload it to GitHub (you can do this at the end if you want) 'git init' and remote add to your repo
+    DO NOT PUSH YOUR PERSONAL LOCAL IP ADDRESS TO GITHUB
+    DO NOT EXPOSE YOUR API URL IN THE FRONTEND, USE ENV VARIABLES
+    I threw this mf together ngl so don't take everything verbatim, you gotta learn what things do and why 
+    and also employ good security practices.
 10. Open Docker Desktop
 11. 'docker compose up --build'
 
