@@ -3,7 +3,7 @@ import { View, Text, Button, ActivityIndicator, Alert, StyleSheet } from "react-
 import Constants from "expo-constants";
 
 // Use API URL from environment variable
-const API_URL = Constants.expoConfig?.extra?.API_URL || "http://localhost:3000";
+const API_URL = Constants.expoConfig?.extra?.API_URL;
 
 const FetchButton: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);

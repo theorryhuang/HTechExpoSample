@@ -1,22 +1,32 @@
+To run this,
+
+1. go to docker-compose.yml and set the environment variable REACT_NATIVE_PACKAGER_HOSTNAME to your computer IP ADDRESS
+2. go to client/app.json and set the variable API_URL under extras to your computer IP ADDRESS:3000
+3. run 'docker compose up --build' in the main directory and scan the QR code to open Expo Go
+4. Alternatively, go to your computer browser and visit localhost:8081
+5. Press the button and you should hopefully see the message "Hello from backend!"
+
+
+To recreate this,
 If things are getting too complicated in your current repo, I suggest just starting fresh.
 
 1. Create a directory on your computer and name it for your project
 2. Create a server directory
-3. 'cd server', 'npm init -y', 'touch server.js', 'touch Dockerfile', 'touch .dockerignore'
+3. In terminal, 'cd server', 'npm init -y', 'touch server.js', 'touch Dockerfile', 'touch .dockerignore'
 4. Go back to the main directory ('cd ..')
-5. 'npx create-expo-app client', 'cd client', 'touch Dockerfile', 'touch .dockerignore', 'rm -rf .git'
+5. In terminal, 'npx create-expo-app client', 'cd client', 'touch Dockerfile', 'touch .dockerignore', 'rm -rf .git'
 6. Go back to the main directory ('cd ..')
-7. 'touch docker-compose.yml'
+7. In terminal, 'touch docker-compose.yml'
 8. You can either copy the content of each Dockerfile and docker-compose.yml from this repo or ask GPT to make you one
     add node_modules to the .dockerignore files
     If you use my docker-compose.yml, make sure you set the REACT_NATIVE_PACKAGER_HOSTNAME environment variable to your local IP
 9. Upload it to GitHub (you can do this at the end if you want) 'git init' and remote add to your repo
     DO NOT PUSH YOUR PERSONAL LOCAL IP ADDRESS TO GITHUB
     DO NOT EXPOSE YOUR API URL IN THE FRONTEND, USE ENV VARIABLES
-    I threw this mf together ngl so don't take everything verbatim, you gotta learn what things do and why 
+    I threw this mf together ngl so dont take everything verbatim, you gotta learn what things do and why 
     and also employ good security practices.
 10. Open Docker Desktop
-11. 'docker compose up --build'
+11. In terminal, in the main project directory, 'docker compose up --build'
 
 You may need to install dependencies in either directory. Make sure you are doing this within the client or server directories
 and not globally in your main directory.

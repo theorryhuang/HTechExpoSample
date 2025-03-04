@@ -21,8 +21,6 @@ app.get("/api/data", (req, res) => {
 });
 
 // Start server
-// 0.0.0.0 is for Docker internal server so this wont run on Expo GO
-// Feel free to change this if you need to
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on port ${PORT}`);
 });

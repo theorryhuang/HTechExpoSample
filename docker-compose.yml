@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   frontend:
     build:
@@ -19,7 +17,7 @@ services:
       - backend
     environment:
       - EXPO_PUBLIC_API_URL=http://backend:3000 # Use Docker internal networking
-      - REACT_NATIVE_PACKAGER_HOSTNAME=192.168.x.x # SET THIS TO YOUR LOCAL PHONE IP ADDRESS IF USING EXPO GO
+      - REACT_NATIVE_PACKAGER_HOSTNAME=192.168.x.x # SET THIS TO YOUR LOCAL IP ADDRESS
       - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0 # Expose Expo DevTools to docker internal
 
   backend:
