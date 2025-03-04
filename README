@@ -9,7 +9,7 @@ If things are getting too complicated in your current repo, I suggest just start
 7. 'touch docker-compose.yml'
 8. You can either copy the content of each Dockerfile and docker-compose.yml from this repo or ask GPT to make you one
     add node_modules to the .dockerignore files
-    
+    If you use my docker-compose.yml, make sure you set the REACT_NATIVE_PACKAGER_HOSTNAME environment variable to your local IP
 9. Upload it to GitHub (you can do this at the end if you want) 'git init' and remote add to your repo
 10. Open Docker Desktop
 11. 'docker compose up --build'
