@@ -17,6 +17,10 @@ services:
     tty: true
     depends_on:
       - backend
+    environment:
+      - EXPO_PUBLIC_API_URL=http://backend:3000 # Use Docker internal networking
+      - REACT_NATIVE_PACKAGER_HOSTNAME=0.0.0.0 # SET THIS TO YOUR LOCAL IP ADDRESS
+      - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0 # Expose Expo DevTools to docker internal
 
   backend:
     build:
@@ -29,6 +33,7 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+
 
 # Build new containers when you make changes:
 #   docker-compose up --build

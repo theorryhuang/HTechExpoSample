@@ -16,5 +16,5 @@ COPY . .
 # Expose Expo default ports
 EXPOSE 8081 19000 19001 19002
 
-# Start Expo in tunnel mode (you can change to LAN if needed)
+# Start Expo in tunnel mode (you can change to LAN or tunnel if needed)
 CMD ["npx", "expo", "start", "--tunnel"]
